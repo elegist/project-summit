@@ -1,6 +1,8 @@
 /**
  * Platform Globals
  */
+#include "summit_lib.h"
+
 static bool running = true;
 
 /**
@@ -96,6 +98,11 @@ int main()
     while (running)
     {
         platformUpdateWindow();
+
+        SM_TRACE("Trace");
+        SM_WARNING("Warning");
+        SM_ERROR("Error");
+        SM_ASSERT(false, "Assertion not hit");
     }
 
     return 0;
